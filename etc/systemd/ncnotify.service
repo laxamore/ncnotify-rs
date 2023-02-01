@@ -1,0 +1,11 @@
+ [Unit]
+Description=ncnotify systemd service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/ncnotify
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

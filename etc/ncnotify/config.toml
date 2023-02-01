@@ -1,0 +1,12 @@
+# ignore path you don't want to monitor
+ignore_path_monitor = []
+
+# your nextcloud data directory
+data_path = "/var/nextdata"
+
+# {data_path} for data_path variable
+# {file} for file or folder name variable when there is a file or folder change
+commands_to_run = "docker exec -it -u root nextcloud php occ files:scan --path=\"{file}\""
+
+# interval in seconds to run the commands when there is file or folder change
+notify_interval = 1
